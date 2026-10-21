@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pedido personalizado | Hora Loca</title>
+  <meta name="description" content="Cuéntanos tu idea y solicita la cotización de tu bouquet personalizado.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Space+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header class="encabezado">
+    <nav class="navbar navbar-expand-md py-2">
+      <div class="container">
+        <a class="marca" href="index.html" aria-label="Hora Loca, ir al inicio">
+          <img class="marca-logo" src="img/logo.png" alt="">
+          <span>Hora Loca</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menuPrincipal">
+          <ul class="navbar-nav mx-auto mb-2 mb-md-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="catalogo.html">Catálogo</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="pedidos.html">Pedidos</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          </ul>
+          <a class="btn-whatsapp-nav btn text-center" role="button" aria-disabled="true">WhatsApp →</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container-fluid px-0">
+      <div class="row g-0">
+        <!-- Formulario -->
+        <div class="col-lg-8">
+          <div class="pedido-form">
+            <div class="encabezado-form">
+              <span class="etiqueta">Pedido personalizado</span>
+              <h1>Cuéntanos tu idea</h1>
+            </div>
+
+            <form action="#" method="post" enctype="multipart/form-data" novalidate>
+              <div class="row g-4">
+                <div class="col-md-6">
+                  <label class="form-label" for="nombre">Nombre completo *</label>
+                  <input class="form-control" type="text" id="nombre" name="nombre" required autocomplete="name">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="telefono">Teléfono / WhatsApp *</label>
+                  <input class="form-control" type="tel" id="telefono" name="telefono" required autocomplete="tel">
+                </div>
+
+                <div class="col-md-6">
+                  <span class="form-label d-block" id="lbl-tipo">Tipo de producto *</span>
+                  <div class="segmento" role="radiogroup" aria-labelledby="lbl-tipo">
+                    <input type="radio" name="tipo" id="tipo1" value="bouquet" checked>
+                    <label for="tipo1">Bouquet</label>
+                    <input type="radio" name="tipo" id="tipo2" value="bouquet-xl">
+                    <label for="tipo2">Bouquet XL</label>
+                    <input type="radio" name="tipo" id="tipo3" value="bouquet-regalo">
+                    <label for="tipo3">Bouquet + Regalo</label>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="fecha">Fecha del evento *</label>
+                  <input class="form-control" type="date" id="fecha" name="fecha" required>
+                </div>
+
+                <div class="col-12">
+                  <label class="form-label" for="tema">Tema y colores deseados *</label>
+                  <input class="form-control" type="text" id="tema" name="tema" required>
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label" for="imagen">Imagen de referencia</label>
+                  <div class="zona-subida">
+                    + Subir imagen
+                    <input class="form-control" type="file" id="imagen" name="imagen" accept="image/*">
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <label class="form-label" for="comentarios">Comentarios adicionales</label>
+                  <textarea class="form-control" id="comentarios" name="comentarios" rows="6"></textarea>
+                </div>
+
+                <div class="col-12 d-flex align-items-center flex-wrap gap-3">
+                  <button class="btn btn-hl btn-lg px-5" type="submit">Enviar solicitud</button>
+                  <span class="nota-campos">* Campos obligatorios</span>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      
+        <aside class="col-lg-4 pedido-lateral">
+          <span class="etiqueta">¿Cómo funciona?</span>
+          <div class="paso"><span class="num">01</span><div><h3>Envía tu solicitud</h3><p>Completa el formulario con los detalles de tu pedido.</p></div></div>
+          <div class="paso"><span class="num">02</span><div><h3>Recibe cotización</h3><p>Te contactamos en menos de 24 h con precio final y detalles.</p></div></div>
+          <div class="paso"><span class="num">03</span><div><h3>Confirmación y anticipo</h3><p>Confirmamos el pedido con un anticipo del 50%.</p></div></div>
+          <div class="paso"><span class="num">04</span><div><h3>Elaboración y entrega</h3><p>Creamos tu diseño y coordinamos la entrega.</p></div></div>
+
+          <div class="caja-whatsapp">
+            <span class="etiqueta">¿Prefieres WhatsApp?</span>
+            <h3>Escríbenos directamente</h3>
+            <span class="num-wa">3007723157</span>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="pie">
+    <div class="container d-flex align-items-center gap-3 flex-wrap"><img class="pie-logo" src="img/logo.png" alt="Hora Loca"><span>© 2026 Hora Loca · Sahagún, Córdoba</span></div>
+  </footer>
+
+  <a class="whatsapp-flotante" role="button" aria-disabled="true" aria-label="WhatsApp">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16.04 3C9.4 3 4 8.4 4 15.03c0 2.12.55 4.19 1.6 6.01L4 29l8.14-1.57a12.03 12.03 0 0 0 3.9.65h.01C22.69 28.08 28 22.68 28 16.05 28 9.4 22.68 3 16.04 3Zm0 22.03h-.01c-1.18 0-2.34-.32-3.35-.92l-.24-.14-4.83.93.96-4.7-.16-.25a9.97 9.97 0 0 1-1.53-5.31C6.88 9.99 10.9 6 16.04 6c2.66 0 5.16 1.04 7.04 2.93a9.9 9.9 0 0 1 2.92 7.05c0 5.5-4.46 9.05-9.96 9.05Zm5.47-7.4c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5-.9-.8-1.5-1.78-1.67-2.08-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z"/></svg>
+  </a>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
